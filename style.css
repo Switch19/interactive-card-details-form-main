@@ -10,11 +10,111 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    
+}
+.container{
+    width: 50rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(270, 3%, 87%);
+}
+.card{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .card-front{
-    width: 450px;
-    height: 500px;
-    background-color: blue;
-    border: 1px solid black;
+    background: url(./images/bg-card-front.png);
+    width: 23rem;
+    padding: 1.2rem;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-top: 60px;
+    background-size: cover;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+.card-front .card-logo{
+    max-width: 5em;
+}
+.card-front .card-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .57em;
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+.card-front .card-number{
+    font-size: 1.58em;
+    letter-spacing: 3px;
+}
+.card-back{
+    background: url(./images/bg-card-back.png);
+    width: 23rem;
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: cover;
+    transform: translateX(4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+}
+.card-back span{
+    color:hsl(270, 3%, 87%);
+    /* font-weight: bold;
+    font-size: small; */
+    transform: translateX(6.4rem);
+}
+form{
+    /* border: 1px solid green; */
+    width: 35%;
+    /* height: 250px; */
+    display: flex;
+    flex-direction: column;
+
+}
+label{
+    color: hsl(278, 68%, 11%);
+    display: block;
+    font-size: .9rem;
+    margin-bottom: .9rem;
+}
+.date-cvc{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin-bottom: 1rem;
+}
+.date{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    gap: 1em;
+}
+input{
+    padding: 6px 5px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid hsl(270, 3%, 87%);
+    margin-bottom: .7rem;
+    outline: none;
+}
+button{
+    background-color: hsl(278, 68%, 11%);
+    width: 100%;
+    border-radius: 6px;
+    padding: 8px 4px;
+    color: hsl(270, 3%, 87%);
+    cursor: pointer;
 }
