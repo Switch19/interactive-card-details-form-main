@@ -62,5 +62,5 @@ how to use grid and flexbox together, using media queries and responsive units f
 need to work more on my media queries skills
 
 ## Author
-- Frontend Mentor - [SwitchTega](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [SwitchTega](https://www.frontendmentor.io/profile/SwitchTega)
 
