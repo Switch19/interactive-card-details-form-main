@@ -3,44 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: url(./images/bg-main-desktop.png);
-    max-width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    
+.wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid;    
 }
-.container{
-    width: 50rem;
-    margin: auto;
+.card-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: hsl(270, 3%, 87%);
+    background: url(./images/bg-main-desktop.png);
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 1px solid red; */
+
 }
+
 .card{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 2.4rem;
 }
 .card-front{
     background: url(./images/bg-card-front.png);
-    width: 23rem;
-    padding: 1.2rem;
+    width: 20rem;
+    padding: 1.1rem;
     background-repeat: no-repeat;
     height: 200px;
-    margin-top: 60px;
+    margin-top: 1.4rem;
     background-size: cover;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-radius: 8px;
+    border-radius: 0.8em;
 }
 .card-front .card-logo{
     max-width: 5em;
@@ -59,7 +60,7 @@ body{
 }
 .card-back{
     background: url(./images/bg-card-back.png);
-    width: 23rem;
+    width: 21rem;
     background-repeat: no-repeat;
     height: 200px;
     background-size: cover;
@@ -67,21 +68,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 0.8em;
 
 }
 .card-back span{
     color:hsl(270, 3%, 87%);
     /* font-weight: bold;
     font-size: small; */
-    transform: translateX(6.4rem);
+    transform: translateX(6.4em);
 }
 form{
     /* border: 1px solid green; */
-    width: 35%;
+    width: 45%;
+    margin: auto;
     /* height: 250px; */
     display: flex;
     flex-direction: column;
+    min-width: 270px;
+    min-height: 280px;
+    padding: .8em;
 
 }
 label{
@@ -118,3 +123,100 @@ button{
     color: hsl(270, 3%, 87%);
     cursor: pointer;
 }
+@media screen and (max-width: 800px) {
+    body{
+        font-size: 75%;
+    }
+    .card{
+        margin-left: 2rem;
+    }
+    .card-front, .card-back{
+        max-width: 18rem;
+        height: 180px;
+    }
+    form{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 750px) {
+    body{
+        font-size: 60%;
+    }
+    /* .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    } */
+    .wrap{
+        display: grid;
+        grid-template-columns: 100%;
+        /* /* height: 100vh;  */
+    }
+    .card-container{
+        color: hsl(270, 3%, 87%);
+        background: url(./images/bg-main-mobile.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    
+    }
+    .card{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        transform: translateY(5em);
+    }
+    .card-front, .card-back{
+        width: 18rem;
+        height: 160px;
+
+    }
+    .card-front{
+        z-index: 2;
+        transform: translate(-1rem, 0.6rem);
+    }
+
+    .card-back{
+       z-index: 1;
+       /* margin-top: 50px; */
+       border: 1px solid rgb(77, 0, 0);
+       transform: translate(4rem, 2.4rem)
+    }
+    form{
+        width: 50%;
+        margin: 6em auto;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    body{
+        font-size: 45%;
+    }
+    .card-front, .card-back{
+        max-width: 14rem;
+        height: 140px;
+    }
+}
+@media screen and (max-width: 350px) {
+    body{
+        font-size: 25%;
+    }
+    .card{
+        width: 50%;
+    }
+    .card-front, .card-back{
+        width: 8.5rem;
+        height: 80px;
+        border-radius: 3px;
+    }
+    form{
+        max-width: 45%;
+    }
+}
+
+
+  
